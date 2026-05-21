@@ -49,7 +49,7 @@ pipeline {
 
         stage('Monitoring') {
             steps {
-                sh 'curl http://localhost:3000/health'
+        sh 'docker exec task-api-container curl http://localhost:3000/health'
             }
         }
     }
