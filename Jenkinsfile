@@ -30,7 +30,7 @@ pipeline {
                 sonarsource/sonar-scanner-cli \
                 -Dsonar.projectKey=task-manager-api \
                 -Dsonar.projectName=task-manager-api \
-                --Dsonar.sources=app.js,server.js,tests \
+                -Dsonar.sources=app.js,server.js,tests \
                 -Dsonar.exclusions=node_modules/**,coverage/**
                 '''
             }
