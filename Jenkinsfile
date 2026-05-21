@@ -27,7 +27,10 @@ pipeline {
                 -e SONAR_HOST_URL="http://host.docker.internal:9000" \
                 -e SONAR_TOKEN="sqp_eef18d06c9bc9edb75994722ab3f168e267efd37" \
                 -v $(pwd):/usr/src \
-                sonarsource/sonar-scanner-cli
+                sonarsource/sonar-scanner-cli \
+                -Dsonar.projectKey=task-manager-api \
+                -Dsonar.projectName=task-manager-api \
+                -Dsonar.sources=.
                 '''
             }
         }
